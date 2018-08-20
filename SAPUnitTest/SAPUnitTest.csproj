@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15FCBA82-A243-40F3-B8CA-70A5D9DF2D95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAPUnitTest</RootNamespace>
+    <AssemblyName>SAPUnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=3.0.2.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\FirebirdClient\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassLibrary\RdbField.cs" />
+    <Compile Include="ClassLibrary\RdbForeignKey.cs" />
+    <Compile Include="ClassLibrary\RdbMetadata.cs" />
+    <Compile Include="ClassLibrary\SystemError.cs" />
+    <Compile Include="DataAccessObjects\CidadeDAO.cs" />
+    <Compile Include="DataAccessObjects\DataAccessBase.cs" />
+    <Compile Include="DataAccessObjects\ElementDAO.cs" />
+    <Compile Include="DataAccessObjects\EncargoDAO.cs" />
+    <Compile Include="DataAccessObjects\FormaPagamentoDAO.cs" />
+    <Compile Include="DataAccessObjects\ProdutoDAO.cs" />
+    <Compile Include="DataAccessObjects\RelationDAO.cs" />
+    <Compile Include="DataAccessObjects\ReportingDocumentDAO.cs" />
+    <Compile Include="DataAccessObjects\ReportingElementDAO.cs" />
+    <Compile Include="DataAccessObjects\UsuarioDAO.cs" />
+    <Compile Include="DataAccessObjects\WorkflowDAO.cs" />
+    <Compile Include="DataConnector.cs" />
+    <Compile Include="DataTransferObjects\CidadeDTO.cs" />
+    <Compile Include="DataTransferObjects\ElementDTO.cs" />
+    <Compile Include="DataTransferObjects\EncargoDTO.cs" />
+    <Compile Include="DataTransferObjects\FormaPagamentoDTO.cs" />
+    <Compile Include="DataTransferObjects\ProdutoDTO.cs" />
+    <Compile Include="DataTransferObjects\RelationDTO.cs" />
+    <Compile Include="DataTransferObjects\ReportingDocumentDTO.cs" />
+    <Compile Include="DataTransferObjects\ReportingElementDTO.cs" />
+    <Compile Include="DataTransferObjects\UsuarioDTO.cs" />
+    <Compile Include="DataTransferObjects\WorkflowDTO.cs" />
+    <Compile Include="DIApiConnector.cs" />
+    <Compile Include="FlowManager\Decision.cs" />
+    <Compile Include="FlowManager\ExecutionBlock.cs" />
+    <Compile Include="FlowManager\FlowElement.cs" />
+    <Compile Include="FlowManager\Loop.cs" />
+    <Compile Include="FlowManager\Relation.cs" />
+    <Compile Include="FlowManager\Workflow.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportingDocument.cs" />
+    <Compile Include="ReportingElement.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Xml\DataAccess.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30088}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\subversion_jobAccounting\Source\DotNet\ClassLibraries\MyXls\MyXls.csproj">
+      <Project>{38C03298-9CB0-4B20-8764-A7025819D9BB}</Project>
+      <Name>MyXls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
